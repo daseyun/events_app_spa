@@ -17,7 +17,7 @@ function EventsNew() {
     event_name: "",
     description: "",
     user_id: get_session().user_id.toString(),
-    date: new Date(),
+    date: [new Date()],
   });
 
   console.log("e1", event.date);
@@ -30,9 +30,10 @@ function EventsNew() {
     console.log("event", event);
 
     let data = pick(event, ["event_name", "description", "user_id", "date"]);
-    create_event(data).then(() => {
+    create_event(data).then((res) => {
+      console.log("DATA", res)
       fetch_events();
-      history.push("/events");
+      history.push("/events/" + res.data.id);
     });
   }
 

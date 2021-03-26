@@ -14,10 +14,11 @@ defmodule EventsAppSPAWeb.EventController do
   def create(conn, %{"event" => event_params}) do
     event_params = %{event_params | "date" => hd(event_params["date"])}
 
+    IO.inspect([:event_p, event_params])
     with {:ok, %Event{} = event} <- Events.create_event(event_params) do
       event = Events.load_user(event)
-      # |> Events.load_comments
-      # |> Events.load_invitees
+      |> Events.load_comments
+      |> Events.load_invitees
 
       conn
       |> put_status(:created)
