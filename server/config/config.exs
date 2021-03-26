@@ -7,11 +7,11 @@
 # General application configuration
 use Mix.Config
 
-config :events_app_SPA,
+config :events_app_spa,
   ecto_repos: [EventsAppSPA.Repo]
 
 # Configures the endpoint
-config :events_app_SPA, EventsAppSPAWeb.Endpoint,
+config :events_app_spa, EventsAppSPAWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "tw/k88mckuW4rrLe0kvmMpT60UhG0JqvDe1EeVJ7rieap1zb9xR/ZCN0polKpehz",
   render_errors: [view: EventsAppSPAWeb.ErrorView, accepts: ~w(html json), layout: false],

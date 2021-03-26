@@ -31,11 +31,11 @@ defmodule EventsAppSPAWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("events_app_SPA.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("events_app_SPA.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("events_app_SPA.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("events_app_SPA.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("events_app_SPA.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("events_app_spa.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("events_app_spa.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("events_app_spa.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("events_app_spa.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("events_app_spa.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),

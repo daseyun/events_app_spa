@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :events_app_SPA, EventsAppSPA.Repo,
+config :events_app_spa, EventsAppSPA.Repo,
   username: "postgres",
   password: "postgres",
   database: "events_app_dev",
@@ -15,7 +15,7 @@ config :events_app_SPA, EventsAppSPA.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :events_app_SPA, EventsAppSPAWeb.Endpoint,
+config :events_app_spa, EventsAppSPAWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -57,7 +57,7 @@ config :cors_plug,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :events_app_SPA, EventsAppSPAWeb.Endpoint,
+config :events_app_spa, EventsAppSPAWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
