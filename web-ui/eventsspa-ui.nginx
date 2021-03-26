@@ -1,0 +1,17 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	root /home/u_eventsspa/events_app_spa/web-ui/build;
+
+	# Add index.php to the list if you are using PHP
+	index index.html;
+
+	server_name events-spa.danyun.me www.events-spa.danyun.me;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+}
