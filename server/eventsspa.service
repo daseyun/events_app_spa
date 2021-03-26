@@ -12,7 +12,7 @@ Environment=PROD=true
 Environment=LANG=en_US.UTF-8
 
 WorkingDirectory=/home/u_eventsspa/events_app_spa/server
-ExecStart=/bin/bash /home/u_eventspa/events_app_spa/server/start.sh
+ExecStart=/bin/bash /home/u_eventsspa/events_app_spa/server/start.sh
 
 [Install]
 WantedBy=multi-user.target
