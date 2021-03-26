@@ -5,8 +5,8 @@ export MIX_ENV=prod
 # Valid port range for a user app to listen
 # on is something like 1025-32767
 export PORT=4900
-export SECRET_KEY_BASE=[redacted]
-export DATABASE_URL=ecto://u_eventsspa:[user_pass]@localhost/events_app_spa_prod
+export SECRET_KEY_BASE=TEDK0jctXVIe7Fg23mUOH5hJOrwFVQRzdEVhlCHyt0YwnRlvT0cijkYc3WJq3ij4
+export DATABASE_URL=ecto://u_eventsspa:Nei7oeX6er6I@localhost/events_app_spa_prod
 mix ecto.create
 mix deps.get --only prod
 mix compile
@@ -33,8 +33,7 @@ export DATABASE_URL=ecto://u_eventsspa:$DB_PASS@localhost/events_app_spa_prod
 
 mix ecto.migrate
 
-npm install --prefix ./assets
-npm run deploy --prefix ./assets
-mix phx.digest
+mix ecto.reset
+#mix phx.digest
 
 mix release
