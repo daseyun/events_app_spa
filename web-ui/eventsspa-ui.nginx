@@ -25,4 +25,20 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";	 	 
     }
+
+	location /users/ {
+		alias /home/u_eventsspa/events_app_spa/web-ui/build/;
+	}
+
+	location /events/ {
+		alias /home/u_eventsspa/events_app_spa/web-ui/build;
+	}
+
+	location /comments/ { 
+		alias /home/u_eventsspa/events_app_spa/web-ui/build;
+	}
+
+	location /invitees/ { 
+		alias /home/u_eventsspa/events_app_spa/web-ui/build;
+	}
 }
