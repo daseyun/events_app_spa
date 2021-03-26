@@ -27,18 +27,10 @@ server {
     }
 
 	location /users/ {
-		alias /home/u_eventsspa/events_app_spa/web-ui/build/;
+		try_files $uri $uri/ =404;
 	}
 
 	location /events/ {
-		alias /home/u_eventsspa/events_app_spa/web-ui/build;
-	}
-
-	location /comments/ { 
-		alias /home/u_eventsspa/events_app_spa/web-ui/build;
-	}
-
-	location /invitees/ { 
-		alias /home/u_eventsspa/events_app_spa/web-ui/build;
+		try_files $uri $uri/ =404;
 	}
 }
