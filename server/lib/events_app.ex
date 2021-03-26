@@ -1,6 +1,6 @@
-defmodule EventsApp do
+defmodule EventsAppSPA do
   @moduledoc """
-  EventsApp keeps the contexts that define your domain
+  EventsAppSPA keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

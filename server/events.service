@@ -1,0 +1,18 @@
+[Unit]
+Description=hw09 events-app-spa
+
+[Service]
+Type=simple
+User=u_eventsspa
+Group=u_eventsspa
+Restart=on-failure
+Environment=MIX_ENV=prod
+Environment=PORT=4900
+Environment=PROD=true
+Environment=LANG=en_US.UTF-8
+
+WorkingDirectory=/home/u_eventsspa/events_app_spa/server
+ExecStart=/bin/bash /home/u_events/events_app_spa/server/start.sh
+
+[Install]
+WantedBy=multi-user.target

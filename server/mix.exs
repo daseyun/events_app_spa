@@ -1,9 +1,9 @@
-defmodule EventsApp.MixProject do
+defmodule EventsAppSPA.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :events_app,
+      app: :events_app_SPA,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule EventsApp.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {EventsApp.Application, []},
+      mod: {EventsAppSPA.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -44,7 +44,9 @@ defmodule EventsApp.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:cors_plug, "~> 2.0"},
+      {:argon2_elixir, "~> 2.0"}
     ]
   end
 

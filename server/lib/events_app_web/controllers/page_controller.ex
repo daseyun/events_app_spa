@@ -1,7 +1,8 @@
-defmodule EventsAppWeb.PageController do
-  use EventsAppWeb, :controller
+defmodule EventsAppSPAWeb.PageController do
+  use EventsAppSPAWeb, :controller
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    events = EventsAppSPA.Events.list_events()
+    render(conn, "index.html", events: events)
   end
 end

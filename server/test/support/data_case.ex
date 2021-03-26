@@ -1,4 +1,4 @@
-defmodule EventsApp.DataCase do
+defmodule EventsAppSPA.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule EventsApp.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use EventsApp.DataCase, async: true`, although
+  by setting `use EventsAppSPA.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,20 +18,20 @@ defmodule EventsApp.DataCase do
 
   using do
     quote do
-      alias EventsApp.Repo
+      alias EventsAppSPA.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import EventsApp.DataCase
+      import EventsAppSPA.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(EventsApp.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(EventsAppSPA.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(EventsApp.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(EventsAppSPA.Repo, {:shared, self()})
     end
 
     :ok

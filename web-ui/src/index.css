@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.c-date-picker {
+  box-shadow: 0px 0px 24px pink;
+  border-color: pink;
+  border-style: solid;
+  border-width: 1px;
+  height: 2rem;
+}

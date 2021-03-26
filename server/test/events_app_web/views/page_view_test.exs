@@ -1,3 +1,3 @@
-defmodule EventsAppWeb.PageViewTest do
-  use EventsAppWeb.ConnCase, async: true
+defmodule EventsAppSPAWeb.PageViewTest do
+  use EventsAppSPAWeb.ConnCase, async: true
 end

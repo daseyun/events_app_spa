@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(EventsApp.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(EventsAppSPA.Repo, :manual)

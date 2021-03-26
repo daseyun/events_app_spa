@@ -1,5 +1,5 @@
-defmodule EventsAppWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :events_app
+defmodule EventsAppSPAWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :events_app_SPA
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
@@ -10,7 +10,7 @@ defmodule EventsAppWeb.Endpoint do
     signing_salt: "mti241xX"
   ]
 
-  socket "/socket", EventsAppWeb.UserSocket,
+  socket "/socket", EventsAppSPAWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -22,7 +22,7 @@ defmodule EventsAppWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :events_app,
+    from: :events_app_SPA,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -32,7 +32,7 @@ defmodule EventsAppWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :events_app
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :events_app_SPA
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -47,8 +47,9 @@ defmodule EventsAppWeb.Endpoint do
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
 
+  plug CORSPlug
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug EventsAppWeb.Router
+  plug EventsAppSPAWeb.Router
 end
