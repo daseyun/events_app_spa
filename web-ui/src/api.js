@@ -1,7 +1,7 @@
 import store from "./store";
 
 export async function api_get(path) {
-  let text = await fetch("http://localhost:4000/api/v1" + path, {});
+  let text = await fetch("http://events-spa.danyun.me/api/v1" + path, {});
   let resp = await text.json();
   return resp.data;
 }
@@ -16,7 +16,7 @@ async function api_post(path, data) {
   };
   //   console.log("post", opts, data)
   console.log("x", data);
-  let text = await fetch("http://localhost:4000/api/v1" + path, opts);
+  let text = await fetch("http://events-spa.danyun.me/api/v1" + path, opts);
   console.log("y", text);
   return await text.json();
 }
@@ -31,7 +31,7 @@ async function api_patch(path, data) {
   };
 
   console.log("x", data);
-  let text = await fetch("http://localhost:4000/api/v1" + path, opts);
+  let text = await fetch("http://events-spa.danyun.me/api/v1" + path, opts);
   console.log("y", text);
   return await text.json();
 }
@@ -46,7 +46,7 @@ async function api_delete(path, data) {
   };
 
   console.log("x", data);
-  let text = await fetch("http://localhost:4000/api/v1" + path, opts);
+  let text = await fetch("http://events-spa.danyun.me/api/v1" + path, opts);
   console.log("y", text);
   return await text;
 }

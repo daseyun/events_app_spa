@@ -35,7 +35,7 @@ function App() {
         <Route path="/events/new" exact> 
           <EventNew />
         </Route>
-        <Route path="/events/:id" exact> 
+        <Route path="/events/:id"> 
           <EventShow />
         </Route>
         <Route path="/events/edit/:id" exact> 
